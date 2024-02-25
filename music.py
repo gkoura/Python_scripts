@@ -4,7 +4,9 @@ import pandas as pd
 # ---------------------------------------------------Analyze txt file---------------------------------------------------
 music_data = []  # Create a list to store dictionaries
 
-with open('C:\\Users\\Grigoris\\Desktop\\music.txt', 'r', encoding='utf-8') as music_file:
+path = "ur path goes here"
+
+with open(path, 'r', encoding='utf-8') as music_file:
     for row in music_file.readlines():
         music_dict = {}
         music_ls = [item.strip() for item in row.split("\t")]
@@ -111,7 +113,7 @@ with pd.ExcelWriter('C:\\Users\\Grigoris\\Desktop\\Music.xlsx', engine='xlsxwrit
     })
     chart.set_y_axis({'reverse': True})
 
-    chart.set_size({'x_scale': 1.5, 'y_scale': 2})
+    chart.set_size({'x_scale': 2, 'y_scale': 2})
     chart.set_legend({'none': True})
 
 
@@ -145,7 +147,7 @@ with pd.ExcelWriter('C:\\Users\\Grigoris\\Desktop\\Music.xlsx', engine='xlsxwrit
     })
     chart.set_y_axis({'reverse': True})
 
-    chart.set_size({'x_scale': 1.5, 'y_scale': 2})
+    chart.set_size({'x_scale': 2, 'y_scale': 2})
     chart.set_legend({'none': True})
 
 
